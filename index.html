@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Health & Hygiene | CSP</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7fbff;
+    color:#17324d;
+    line-height:1.6;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#087f8c;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#24465d;
+    margin-left:18px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+    background:linear-gradient(135deg,#e5fbf8,#edf6ff);
+}
+
+.badge{
+    display:inline-block;
+    background:#d5f4f1;
+    color:#087f8c;
+    padding:8px 15px;
+    border-radius:25px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,6vw,4.5rem);
+    color:#123b52;
+}
+
+.hero p{
+    max-width:750px;
+    margin:15px auto 25px;
+    color:#527083;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    margin:5px;
+    background:#087f8c;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.btn.alt{
+    background:white;
+    color:#087f8c;
+    border:1px solid #087f8c;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h2{
+    font-size:32px;
+    color:#153f56;
+}
+
+.title p{
+    color:#698090;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #dce9f1;
+    box-shadow:0 8px 25px #17324d12;
+}
+
+.card h3{
+    color:#14546b;
+    margin-bottom:10px;
+}
+
+.icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#123f55;
+    color:white;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:45px;
+    color:#a9f0e9;
+}
+
+.stat span{
+    font-size:14px;
+}
+
+.highlight{
+    background:#e8f7f7;
+    border-left:5px solid #087f8c;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* FIELD PHOTOS */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.photo{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid #dce9f1;
+    box-shadow:0 8px 25px #17324d12;
+}
+
+.photo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.photo-content{
+    padding:18px;
+}
+
+.photo-content h3{
+    color:#14546b;
+    margin-bottom:5px;
+}
+
+.photo-content p{
+    color:#698090;
+    font-size:14px;
+}
+
+.team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.person{
+    background:white;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid #dce9f1;
+}
+
+.person b{
+    display:block;
+    color:#164e63;
+    margin-bottom:5px;
+}
+
+footer{
+    background:#123f55;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer p{
+    color:#cce1e7;
+    margin:5px;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav a{
+        margin:0 5px;
+        font-size:13px;
+    }
+
+    .hero{
+        padding:65px 20px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav">
+
+<div class="logo">
+Health & Hygiene
+</div>
+
+<div>
+<a href="#about">About</a>
+<a href="#problems">Problems</a>
+<a href="#practices">Practices</a>
+<a href="#data">Data</a>
+<a href="#fieldwork">Field Work</a>
+<a href="#team">Team</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="badge">
+COMMUNITY SERVICE PROJECT • 2026–27
+</div>
+
+<h1>Health & Hygiene</h1>
+
+<p>
+Creating awareness about personal hygiene, safe drinking water,
+sanitation, clean surroundings and responsible waste management.
+</p>
+
+<a href="#about" class="btn">
+Explore Project
+</a>
+
+<a href="#fieldwork" class="btn alt">
+View Field Work
+</a>
+
+<p>
+Viswam Engineering College<br>
+Department of Computer Science and Engineering
+</p>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="title">
+<h2>About Our Project</h2>
+<p>Understanding health and hygiene in everyday community life.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🧼</div>
+<h3>Personal Hygiene</h3>
+<p>
+Handwashing, bathing, oral care and wearing clean clothes
+are important daily hygiene practices.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>Safe Drinking Water</h3>
+<p>
+Safe drinking water and proper storage help maintain
+good health and hygiene.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚻</div>
+<h3>Sanitation</h3>
+<p>
+Proper toilets, waste management and clean surroundings
+are important for a healthy community.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">♻️</div>
+<h3>Waste Management</h3>
+<p>
+Responsible disposal and segregation of waste help
+keep our surroundings clean.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEMS -->
+
+<section id="problems">
+
+<div class="title">
+<h2>Problems Identified</h2>
+<p>Important hygiene-related concerns observed during our project.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Improper Waste Disposal</h3>
+<p>
+Throwing garbage in open areas makes the surroundings dirty
+and can create health risks.
+</p>
+</div>
+
+<div class="card">
+<h3>Unclean Surroundings</h3>
+<p>
+Accumulated waste can attract flies and pests and reduce
+environmental cleanliness.
+</p>
+</div>
+
+<div class="card">
+<h3>Hygiene Awareness</h3>
+<p>
+Awareness about handwashing, safe water, sanitation and
+cleanliness is important.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HEALTHY PRACTICES -->
+
+<section id="practices">
+
+<div class="title">
+<h2>Healthy Practices</h2>
+<p>Simple practices that can be followed every day.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>🧼 Wash Hands</h3>
+<p>
+Wash hands regularly with soap, especially before eating
+and after using the toilet.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Safe Water</h3>
+<p>
+Keep drinking water in clean and covered containers.
+</p>
+</div>
+
+<div class="card">
+<h3>🚻 Proper Sanitation</h3>
+<p>
+Keep toilets and surrounding areas clean.
+</p>
+</div>
+
+<div class="card">
+<h3>♻️ Proper Waste Disposal</h3>
+<p>
+Dispose of waste responsibly and follow proper
+waste segregation practices.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DATA -->
+
+<section id="data">
+
+<div class="title">
+<h2>India: 2022 Snapshot</h2>
+<p>
+Published national statistics used as secondary data.
+</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>93%</strong>
+<span>Basic drinking-water services</span>
+</div>
+
+<div class="stat">
+<strong>78%</strong>
+<span>Basic sanitation services</span>
+</div>
+
+<div class="stat">
+<strong>76%</strong>
+<span>Basic handwashing facility with soap & water</span>
+</div>
+
+<div class="stat">
+<strong>11%</strong>
+<span>Open defecation</span>
+</div>
+
+</div>
+
+<div class="highlight">
+
+<b>Note:</b>
+These are national secondary-data figures.
+They are background information and do not represent
+a local survey of the selected community.
+
+</div>
+
+</section>
+
+
+<!-- FIELD WORK -->
+
+<section id="fieldwork">
+
+<div class="title">
+
+<h2>Our Field Work</h2>
+
+<p>
+Photos captured during our Health & Hygiene
+Community Service Project.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<!-- PHOTO 1 -->
+
+<div class="photo">
+
+<img src="field1.jpg" alt="Health and Hygiene Field Visit">
+
+<div class="photo-content">
+
+<h3>Field Visit</h3>
+
+<p>
+Our team during the Health & Hygiene field visit
+at Angallu, Andhra Pradesh.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div class="photo">
+
+<img src="field2.jpg" alt="CSP Team">
+
+<div class="photo-content">
+
+<h3>Team Activity</h3>
+
+<p>
+Our team documenting the Community Service Project
+field work.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div class="photo">
+
+<img src="field3.jpg" alt="Waste Management Observation">
+
+<div class="photo-content">
+
+<h3>Waste Management</h3>
+
+<p>
+Observation of waste accumulation and cleanliness
+conditions in the field area.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="photo">
+
+<img src="field4.jpg" alt="Hygiene Awareness">
+
+<div class="photo-content">
+
+<h3>Hygiene Awareness</h3>
+
+<p>
+A team member explaining health and hygiene
+awareness to a community member.
+</p>
+
+</div>
+
+  </div>
